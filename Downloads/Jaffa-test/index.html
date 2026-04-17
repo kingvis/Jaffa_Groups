@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jaffa Group — Where Architecture Meets Artistry. Premier construction and interior design in Utah's mountain communities." />
+  <title>Jaffa Group</title>
+  <link rel="icon" type="image/jpeg" href="/assets/logos/jaff logo.jpeg" />
+  <script>(function(){var t=localStorage.getItem('jaffa-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       LOADER
+  ═══════════════════════════════════════ -->
+  <div class="loader" id="loader" aria-live="polite">
+    <div class="loader__inner">
+      <span class="loader__brand">JAFFA GROUP</span>
+      <div class="loader__bar"><div class="loader__fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION — minimal, overlaid
+  ═══════════════════════════════════════ -->
+  <header class="nav" id="nav" role="banner">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="Jaffa Group">
+        <img src="/assets/logos/logo-gold.jpeg" alt="" class="nav__logo-img" aria-hidden="true" />
+        <span class="nav__logo-text">Jaffa Group</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary navigation">
+        <a href="#about"     class="nav__link">About</a>
+        <a href="#portfolio" class="nav__link">Portfolio</a>
+        <a href="#services"  class="nav__link">Services</a>
+        <a href="#contact"   class="nav__link">Contact</a>
+      </nav>
+
+      <a href="#contact" class="nav__cta">Get in Touch</a>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <svg class="theme-toggle__moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="theme-toggle__sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════
+       HERO — full-bleed, massive display type
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <!-- Three.js ambient particle canvas -->
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+    <!-- Cycling background images -->
+    <div class="hero__images" aria-hidden="true">
+      <div class="hero__slide hero__slide--active" style="background-image:url('/assets/hero/showcase 2.webp')"></div>
+      <div class="hero__slide" style="background-image:url('/assets/hero/showcase 3.webp')"></div>
+      <div class="hero__slide" style="background-image:url('/assets/hero/showcase 4.webp')"></div>
+      <div class="hero__slide" style="background-image:url('/assets/hero/showcase 5.webp')"></div>
+      <div class="hero__slide" style="background-image:url('/assets/hero/showcase 6.webp')"></div>
+      <div class="hero__slide" style="background-image:url('/assets/hero/T 2.webp')"></div>
+    </div>
+
+    <!-- Gradient vignette -->
+    <div class="hero__vignette" aria-hidden="true"></div>
+
+    <!-- Main content -->
+    <div class="hero__body">
+      <!-- Top-left meta -->
+      <div class="hero__meta" data-reveal>
+        <span>Est. 2010</span>
+        <span class="hero__meta-dot">·</span>
+        <span>Park City, Utah</span>
+      </div>
+
+      <!-- Display title — massive -->
+      <h1 class="hero__title" aria-label="Jaffa Group">
+        <span class="hero__title-word" data-reveal>JAFFA</span>
+        <span class="hero__title-word hero__title-word--gold" data-reveal>GROUP</span>
+      </h1>
+
+      <!-- Bottom row -->
+      <div class="hero__foot" data-reveal>
+        <p class="hero__tagline">Where Architecture<br><em>Meets Artistry</em></p>
+        <div class="hero__ctas">
+          <a href="#portfolio" class="hero__btn">
+            <span>Explore Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="hero__badge" aria-hidden="true">
+          <span class="hero__badge-num">37+</span>
+          <span class="hero__badge-label">Luxury<br>Properties</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll cue (line only, no text label) -->
+    <div class="hero__scroll-cue" aria-label="Scroll to explore">
+      <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       MARQUEE TICKER
+  ═══════════════════════════════════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Luxury Homes</span><span class="marquee__dot">◆</span>
+      <span>Mountain Estates</span><span class="marquee__dot">◆</span>
+      <span>Interior Design</span><span class="marquee__dot">◆</span>
+      <span>Deer Valley</span><span class="marquee__dot">◆</span>
+      <span>Park City</span><span class="marquee__dot">◆</span>
+      <span>White Pine Canyon</span><span class="marquee__dot">◆</span>
+      <span>Promontory</span><span class="marquee__dot">◆</span>
+      <span>Custom Build</span><span class="marquee__dot">◆</span>
+      <span>Luxury Homes</span><span class="marquee__dot">◆</span>
+      <span>Mountain Estates</span><span class="marquee__dot">◆</span>
+      <span>Interior Design</span><span class="marquee__dot">◆</span>
+      <span>Deer Valley</span><span class="marquee__dot">◆</span>
+      <span>Park City</span><span class="marquee__dot">◆</span>
+      <span>White Pine Canyon</span><span class="marquee__dot">◆</span>
+      <span>Promontory</span><span class="marquee__dot">◆</span>
+      <span>Custom Build</span><span class="marquee__dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       01/ ABOUT — flanking images + center quote
+  ═══════════════════════════════════════ -->
+  <section class="about" id="about" aria-labelledby="about-heading">
+    <div class="section-label" data-reveal>01 / Who We Are</div>
+
+    <div class="about__dream">
+      <!-- Left floating image -->
+      <div class="about__dream-img about__dream-img--left" data-reveal>
+        <img src="/assets/hero/showcase 7.webp" alt="Jaffa Group — luxury interior" loading="lazy" />
+      </div>
+
+      <!-- Center text -->
+      <div class="about__dream-center" data-reveal>
+        <div class="about__diamond" aria-hidden="true">◆</div>
+        <h2 class="about__headline" id="about-heading">
+          If you can <em>dream it</em>,<br>we can <em>build it</em>.
+        </h2>
+        <p class="about__body">
+          We bring a uniquely personalised perspective to every project —
+          delivering spaces of extraordinary beauty and optimal function.
+          Renowned for our architectural vision and masterful craftsmanship
+          across Utah's most coveted mountain communities.
+        </p>
+        <a href="#contact" class="btn-pill">Start Your Project</a>
+      </div>
+
+      <!-- Right floating image -->
+      <div class="about__dream-img about__dream-img--right" data-reveal>
+        <img src="/assets/hero/showcase6.webp" alt="Jaffa Group — exterior architecture" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- Stats row -->
+    <div class="about__stats">
+      <div class="about__stat" data-reveal>
+        <span class="about__stat-num" data-counter="150">0</span>
+        <span class="about__stat-unit">+</span>
+        <span class="about__stat-label">Projects</span>
+      </div>
+      <div class="about__stat-divider" aria-hidden="true"></div>
+      <div class="about__stat" data-reveal>
+        <span class="about__stat-num" data-counter="15">0</span>
+        <span class="about__stat-unit">yr</span>
+        <span class="about__stat-label">Excellence</span>
+      </div>
+      <div class="about__stat-divider" aria-hidden="true"></div>
+      <div class="about__stat" data-reveal>
+        <span class="about__stat-num" data-counter="37">0</span>
+        <span class="about__stat-unit">+</span>
+        <span class="about__stat-label">Communities</span>
+      </div>
+      <div class="about__stat-divider" aria-hidden="true"></div>
+      <div class="about__stat" data-reveal>
+        <span class="about__stat-num" data-counter="98">0</span>
+        <span class="about__stat-unit">%</span>
+        <span class="about__stat-label">Satisfaction</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FEATURED PROJECT — full-bleed spotlight
+  ═══════════════════════════════════════ -->
+  <section class="featured" aria-label="Featured project">
+    <div class="featured__inner">
+      <div class="featured__image" data-reveal>
+        <img src="/assets/portfolio/featured-deer-valley-i-1024x682.jpg"
+             alt="Deer Valley — Jaffa Group" loading="lazy" />
+      </div>
+      <div class="featured__content" data-reveal>
+        <span class="section-label" style="margin-bottom:1.5rem">Featured Project</span>
+        <h2 class="featured__title">Deer Valley<br><em>Mountain Estate</em></h2>
+        <p class="featured__body">
+          A study in elevation — this mountain retreat commands panoramic views
+          while drawing its material palette from the terrain itself.
+          Hand-selected stone, reclaimed timber, and floor-to-ceiling glass
+          render the boundary between inside and out irrelevant.
+        </p>
+        <div class="featured__meta">
+          <div class="featured__meta-item">
+            <span class="featured__meta-label">Location</span>
+            <span class="featured__meta-value">Deer Valley, UT</span>
+          </div>
+          <div class="featured__meta-item">
+            <span class="featured__meta-label">Type</span>
+            <span class="featured__meta-value">Custom Residential</span>
+          </div>
+          <div class="featured__meta-item">
+            <span class="featured__meta-label">Size</span>
+            <span class="featured__meta-value">8,400 sq ft</span>
+          </div>
+        </div>
+        <a href="#portfolio" class="btn-pill btn-pill--ghost">View Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       02/ PORTFOLIO — editorial grid
+  ═══════════════════════════════════════ -->
+  <section class="portfolio" id="portfolio" aria-labelledby="portfolio-heading">
+    <div class="portfolio__header">
+      <div class="section-label" data-reveal>02 / Portfolio</div>
+      <div class="portfolio__header-row">
+        <h2 class="portfolio__title" id="portfolio-heading" data-reveal>
+          Selected<br><em>Projects</em>
+        </h2>
+        <div class="portfolio__filters" role="tablist" aria-label="Filter projects" data-reveal>
+          <button class="filter-btn filter-btn--active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="residential"  role="tab" aria-selected="false">Residential</button>
+          <button class="filter-btn" data-filter="mountain"     role="tab" aria-selected="false">Mountain</button>
+          <button class="filter-btn" data-filter="interior"     role="tab" aria-selected="false">Interior</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards rendered by portfolio.js -->
+    <div class="portfolio__grid" id="portfolioGrid" role="list" aria-label="Project portfolio"></div>
+
+    <div class="portfolio__more" data-reveal>
+      <button class="btn-pill btn-pill--ghost" id="loadMoreBtn">Load More Projects</button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       03/ SERVICES — numbered 4-col with images
+  ═══════════════════════════════════════ -->
+  <section class="services" id="services" aria-labelledby="services-heading">
+    <div class="services__header">
+      <div class="section-label" data-reveal>03 / What We Do</div>
+      <h2 class="services__title" id="services-heading" data-reveal>
+        Our<br><em>Services</em>
+      </h2>
+    </div>
+
+    <div class="services__grid">
+      <article class="service-card" data-reveal>
+        <div class="service-card__img">
+          <img src="/assets/portfolio/featured-deer-valley-i-1024x682.jpg"
+               alt="Architecture & Design" loading="lazy" />
+        </div>
+        <div class="service-card__num" aria-hidden="true">01</div>
+        <h3 class="service-card__title">Architecture<br>& Design</h3>
+        <p class="service-card__body">Custom architectural vision fusing site-specific context with timeless aesthetic.</p>
+      </article>
+
+      <article class="service-card" data-reveal>
+        <div class="service-card__img">
+          <img src="/assets/portfolio/featured-federal-heights-1024x694.jpg"
+               alt="Construction" loading="lazy" />
+        </div>
+        <div class="service-card__num" aria-hidden="true">02</div>
+        <h3 class="service-card__title">Precision<br>Construction</h3>
+        <p class="service-card__body">Premium materials, master craftsmen. On time, on budget, built to last generations.</p>
+      </article>
+
+      <article class="service-card" data-reveal>
+        <div class="service-card__img">
+          <img src="/assets/portfolio/featured-mountain-top-spec-1024x576.jpg"
+               alt="Interior Design" loading="lazy" />
+        </div>
+        <div class="service-card__num" aria-hidden="true">03</div>
+        <h3 class="service-card__title">Interior<br>Design</h3>
+        <p class="service-card__body">Curated interiors — custom millwork, material selection, furniture, and lighting.</p>
+      </article>
+
+      <article class="service-card" data-reveal>
+        <div class="service-card__img">
+          <img src="/assets/portfolio/featured-quarry-mountain-tall-1024x709.jpg"
+               alt="AR/VR Visualization" loading="lazy" />
+        </div>
+        <div class="service-card__num" aria-hidden="true">04</div>
+        <h3 class="service-card__title">AR/VR<br>Visualization</h3>
+        <p class="service-card__body">Experience your home before it's built. Immersive 3D walkthroughs on any device.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       04/ PROCESS — horizontal step pills
+  ═══════════════════════════════════════ -->
+  <section class="process" aria-labelledby="process-heading">
+    <div class="process__header">
+      <div class="section-label" data-reveal>04 / How It Works</div>
+      <h2 class="process__title" id="process-heading" data-reveal>
+        Create your own<br><em>home right now</em>
+      </h2>
+    </div>
+
+    <div class="process__steps" data-reveal>
+      <div class="process__step process__step--active">
+        <span class="process__step-num">01</span>
+        <span class="process__step-label">Research</span>
+      </div>
+      <span class="process__arrow" aria-hidden="true">›</span>
+      <div class="process__step">
+        <span class="process__step-num">02</span>
+        <span class="process__step-label">Concept</span>
+      </div>
+      <span class="process__arrow" aria-hidden="true">›</span>
+      <div class="process__step">
+        <span class="process__step-num">03</span>
+        <span class="process__step-label">Design</span>
+      </div>
+      <span class="process__arrow" aria-hidden="true">›</span>
+      <div class="process__step">
+        <span class="process__step-num">04</span>
+        <span class="process__step-label">Build</span>
+      </div>
+      <span class="process__arrow" aria-hidden="true">›</span>
+      <div class="process__step">
+        <span class="process__step-num">05</span>
+        <span class="process__step-label">Handover</span>
+      </div>
+    </div>
+
+    <div class="process__showcase" data-reveal>
+      <div class="process__showcase-img">
+        <img src="/assets/portfolio/featured-white-pine-vi-tall-1024x709.jpg"
+             alt="White Pine VI — construction process" loading="lazy" />
+      </div>
+      <div class="process__showcase-img">
+        <img src="/assets/portfolio/featured-quarry-mountain-1024x526.jpg"
+             alt="Quarry Mountain — build phase" loading="lazy" />
+      </div>
+    </div>
+
+    <p class="process__caption" data-reveal>
+      Visualization translates ideas into clear, realistic spaces. It helps you understand
+      proportion, atmosphere, and material before a single stone is laid.
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="contact__inner" id="contactInner"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="/assets/logos/logo-gold.jpeg" alt="Jaffa Group" class="footer__logo" />
+          <p class="footer__tagline">Where Architecture<br>Meets Artistry</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-col">
+            <span class="footer__nav-head">Pages</span>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-head">Communities</span>
+            <a href="#portfolio">Deer Valley</a>
+            <a href="#portfolio">Park City</a>
+            <a href="#portfolio">Promontory</a>
+            <a href="#portfolio">White Pine Canyon</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-head">Contact</span>
+            <a href="tel:+14355550192">+1 (435) 555-0192</a>
+            <a href="mailto:hello@jaffagroup.com">hello@jaffagroup.com</a>
+            <span>Park City, Utah</span>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Jaffa Group. All rights reserved.</p>
+        <p>Est. 2010 · Park City, Utah</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       GALLERY MODAL
+  ═══════════════════════════════════════ -->
+  <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Property gallery" hidden>
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__panel">
+      <div class="modal__header">
+        <h2 class="modal__title" id="modalTitle"></h2>
+        <div class="modal__xr-controls" id="xrControls"></div>
+        <button class="modal__close" id="modalClose" aria-label="Close gallery">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__viewer" id="modalViewer"></div>
+      <div class="modal__nav">
+        <button class="modal__nav-btn" id="modalPrev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <span class="modal__counter" id="modalCounter"></span>
+        <button class="modal__nav-btn" id="modalNext" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

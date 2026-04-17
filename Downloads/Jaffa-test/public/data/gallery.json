@@ -1,0 +1,321 @@
+{
+  "gallery": [
+    {
+      "id": "deer-valley",
+      "title": "Deer Valley",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Deer Valley/1.jpg",
+        "/assets/portfolio/Deer Valley/2.jpg",
+        "/assets/portfolio/Deer Valley/3.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/featured-deer-valley-i-1024x682.jpg",
+      "tags": ["mountain", "luxury", "residential"]
+    },
+    {
+      "id": "federal-heights",
+      "title": "Federal Heights",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Federal Heights/1.jpg",
+        "/assets/portfolio/Federal Heights/2.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/featured-federal-heights-1024x694.jpg",
+      "tags": ["luxury", "residential", "interior"]
+    },
+    {
+      "id": "mountain-top-spec",
+      "title": "Mountain Top Spec Home",
+      "category": "architectural",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Mountain Top Spec Home/1.jpg",
+        "/assets/portfolio/Mountain Top Spec Home/2.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/featured-mountain-top-spec-1024x576.jpg",
+      "tags": ["architectural", "mountain", "luxury"]
+    },
+    {
+      "id": "quarry-mountain",
+      "title": "Quarry Mountain",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Quarry Mountain/1.jpg",
+        "/assets/portfolio/Quarry Mountain/2.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/featured-quarry-mountain-tall-1024x709.jpg",
+      "tags": ["mountain", "luxury", "interior"]
+    },
+    {
+      "id": "white-pine-vi",
+      "title": "White Pine VI",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/White pine VI/1.jpg",
+        "/assets/portfolio/White pine VI/2.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/featured-white-pine-vi-tall-1024x709.jpg",
+      "tags": ["mountain", "luxury", "residential"]
+    },
+    {
+      "id": "promontory-i",
+      "title": "Promontory I",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Promontory I/G-1-1024x570.jpg",
+        "/assets/portfolio/Promontory I/G-12-684x1024.jpg",
+        "/assets/portfolio/Promontory I/G-13-1024x683.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Promontory I/G-1-1024x570.jpg",
+      "tags": ["mountain", "luxury", "residential"]
+    },
+    {
+      "id": "promontory-vi",
+      "title": "Promontory VI",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Promontory VI/10-Promontory-Road-CMelissa-Kelsey-683x1024.jpg",
+        "/assets/portfolio/Promontory VI/11-Promontory-Road-CMelissa-Kelsey-713x1024.jpg",
+        "/assets/portfolio/Promontory VI/12-Promontory-Road-CMelissa-Kelsey-1024x676.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Promontory VI/10-Promontory-Road-CMelissa-Kelsey-683x1024.jpg",
+      "tags": ["mountain", "luxury", "residential"]
+    },
+    {
+      "id": "glenwild",
+      "title": "Glenwild",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Glenwild/r-1-1024x797.jpg",
+        "/assets/portfolio/Glenwild/r-11-1024x671.jpg",
+        "/assets/portfolio/Glenwild/r-15-1024x683.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Glenwild/r-1-1024x797.jpg",
+      "tags": ["mountain", "luxury", "residential"]
+    },
+    {
+      "id": "park-meadows-barn",
+      "title": "Park Meadows — Modern Barn",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Park Meadows _ Modern Barn/K-11-1024x709.jpg",
+        "/assets/portfolio/Park Meadows _ Modern Barn/K-12-1024x683.jpg",
+        "/assets/portfolio/Park Meadows _ Modern Barn/K-13-1024x657.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Park Meadows _ Modern Barn/K-11-1024x709.jpg",
+      "tags": ["modern", "residential", "interior"]
+    },
+    {
+      "id": "the-colony",
+      "title": "The Colony",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/The Colony/TheColony00.jpg",
+        "/assets/portfolio/The Colony/TheColony01.jpg",
+        "/assets/portfolio/The Colony/TheColony02.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/The Colony/TheColony00.jpg",
+      "tags": ["luxury", "residential"]
+    },
+    {
+      "id": "white-pine-canyon-i",
+      "title": "White Pine Canyon I",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/White Pine Canyon I/172whitePineCanyon00.jpg",
+        "/assets/portfolio/White Pine Canyon I/172whitePineCanyon01.jpg",
+        "/assets/portfolio/White Pine Canyon I/172whitePineCanyon02.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/White Pine Canyon I/172whitePineCanyon00.jpg",
+      "tags": ["mountain", "luxury", "residential"]
+    },
+    {
+      "id": "white-pine-canyon-ii",
+      "title": "White Pine Canyon II",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/White Pine Canyon II/162whitePine00.jpg",
+        "/assets/portfolio/White Pine Canyon II/162whitePine01.jpg",
+        "/assets/portfolio/White Pine Canyon II/162whitePine02.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/White Pine Canyon II/162whitePine00.jpg",
+      "tags": ["mountain", "luxury", "residential"]
+    },
+    {
+      "id": "park-city-iron-mountain",
+      "title": "Park City — Iron Mountain",
+      "category": "architectural",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Park City Iron Mountain/featured-park-city-iron-mountain.jpg",
+        "/assets/portfolio/Park City Iron Mountain/p01.jpg",
+        "/assets/portfolio/Park City Iron Mountain/p02.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Park City Iron Mountain/featured-park-city-iron-mountain.jpg",
+      "tags": ["architectural", "mountain", "luxury"]
+    },
+    {
+      "id": "michigan-lakefront",
+      "title": "Michigan Lakefront",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Michigan Lakefront/MARS7009-1024x682.jpg",
+        "/assets/portfolio/Michigan Lakefront/MARS70091-1024x682.jpg",
+        "/assets/portfolio/Michigan Lakefront/MARS70271-1024x683.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Michigan Lakefront/MARS7009-1024x682.jpg",
+      "tags": ["lakefront", "luxury", "residential"]
+    },
+    {
+      "id": "aerie-drive",
+      "title": "Aerie Drive",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Aerie Drive/974aerieDrive00.jpg",
+        "/assets/portfolio/Aerie Drive/974aerieDrive01.jpg",
+        "/assets/portfolio/Aerie Drive/974aerieDrive02.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Aerie Drive/974aerieDrive00.jpg",
+      "tags": ["residential", "luxury"]
+    },
+    {
+      "id": "old-town",
+      "title": "Old Town",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Old Town/20180823_SKI-LOUNGE-REVISED-RENDERINGS-1.jpg",
+        "/assets/portfolio/Old Town/20180823_SKI-LOUNGE-REVISED-RENDERINGS-3.jpg",
+        "/assets/portfolio/Old Town/20180823_SKI-LOUNGE-REVISED-RENDERINGS-11.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Old Town/20180823_SKI-LOUNGE-REVISED-RENDERINGS-1.jpg",
+      "tags": ["residential", "interior"]
+    },
+    {
+      "id": "preserve",
+      "title": "The Preserve",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Preserve/LS-1-1024x618.jpg",
+        "/assets/portfolio/Preserve/LS-11-1024x515.jpg",
+        "/assets/portfolio/Preserve/LS-14-1024x674.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Preserve/LS-1-1024x618.jpg",
+      "tags": ["residential", "luxury", "mountain"]
+    },
+    {
+      "id": "salt-lake-bungalow",
+      "title": "Salt Lake Bungalow",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Salt Lake Bungalow/Jaffa-Ski-Home-CMelissa-Kelsey-16.jpg",
+        "/assets/portfolio/Salt Lake Bungalow/Jaffa-Ski-Home-CMelissa-Kelsey-17.jpg",
+        "/assets/portfolio/Salt Lake Bungalow/Jaffa-Ski-Home-CMelissa-Kelsey-18.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Salt Lake Bungalow/Jaffa-Ski-Home-CMelissa-Kelsey-16.jpg",
+      "tags": ["residential", "interior"]
+    },
+    {
+      "id": "hawk-court",
+      "title": "Hawk Court",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Hawk Court/7864HawkCourt00.jpg",
+        "/assets/portfolio/Hawk Court/7864HawkCourt01.jpg",
+        "/assets/portfolio/Hawk Court/7864HawkCourt02.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Hawk Court/7864HawkCourt00.jpg",
+      "tags": ["residential", "luxury"]
+    },
+    {
+      "id": "american-saddler",
+      "title": "American Saddler",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/American Saddler/J-12-1024x683.jpg",
+        "/assets/portfolio/American Saddler/J-14-1024x683.jpg",
+        "/assets/portfolio/American Saddler/J-15-1024x683.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/American Saddler/J-12-1024x683.jpg",
+      "tags": ["residential", "luxury", "interior"]
+    },
+    {
+      "id": "holiday-ranch",
+      "title": "Holiday Ranch",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Holiday Ranch/1-featured-photo.jpg",
+        "/assets/portfolio/Holiday Ranch/m-12-1.jpg",
+        "/assets/portfolio/Holiday Ranch/m-13-1.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Holiday Ranch/1-featured-photo.jpg",
+      "tags": ["residential", "ranch", "luxury"]
+    },
+    {
+      "id": "iron-canyon",
+      "title": "Iron Canyon",
+      "category": "architectural",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Iron Caynon/01-6J2A1614-Edit-Edit-Edit-1024x683.jpg",
+        "/assets/portfolio/Iron Caynon/02-6J2A1636-1024x683.jpg",
+        "/assets/portfolio/Iron Caynon/03-Rothwell-1-of-1-2-1024x683.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Iron Caynon/01-6J2A1614-Edit-Edit-Edit-1024x683.jpg",
+      "tags": ["architectural", "luxury", "mountain"]
+    },
+    {
+      "id": "prospector",
+      "title": "Prospector",
+      "category": "residential",
+      "type": "2d",
+      "images": [
+        "/assets/portfolio/Prospector/Jaffa-Ski-Home-CMelissa-Kelsey-1.jpg",
+        "/assets/portfolio/Prospector/Jaffa-Ski-Home-CMelissa-Kelsey-10.jpg",
+        "/assets/portfolio/Prospector/Jaffa-Ski-Home-CMelissa-Kelsey-11.jpg"
+      ],
+      "thumbnailUrl": "/assets/portfolio/Prospector/Jaffa-Ski-Home-CMelissa-Kelsey-1.jpg",
+      "tags": ["residential", "interior"]
+    },
+    {
+      "id": "promontory-panorama",
+      "title": "Promontory — Grand Room (360°)",
+      "category": "residential",
+      "type": "panorama360",
+      "assetUrl": "/assets/panoramas/promontory-grand-room.jpg",
+      "thumbnailUrl": "/assets/portfolio/Promontory I/G-13-1024x683.jpg",
+      "tags": ["panorama", "mountain", "luxury"],
+      "_note": "Awaiting 360° equirectangular panorama asset from client"
+    },
+    {
+      "id": "mountain-top-3d",
+      "title": "Mountain Top — 3D Walkthrough",
+      "category": "architectural",
+      "type": "gltf",
+      "assetUrl": "/assets/models/mountain-top-spec.glb",
+      "envMapUrl": "/assets/hdr/alpine-interior.hdr",
+      "cameraPosition": { "x": 0, "y": 1.6, "z": 3 },
+      "thumbnailUrl": "/assets/portfolio/featured-mountain-top-spec-1024x576.jpg",
+      "tags": ["3d", "architectural", "luxury"],
+      "_note": "Awaiting GLTF model and HDR from client"
+    }
+  ]
+}
