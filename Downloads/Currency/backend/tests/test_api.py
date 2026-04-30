@@ -30,7 +30,7 @@ class TestGetCurrencies:
         usd = data["USD"]
         assert usd["currencyCode"] == "USD"
         assert usd["currencyName"] == "US Dollars"
-        assert usd["countryName"] == "Usa"  # title-cased from "USA"
+        assert usd["countryName"] == "USA"
 
     def test_inr_entry_present(self):
         """TC-03: INR is present with correct details."""

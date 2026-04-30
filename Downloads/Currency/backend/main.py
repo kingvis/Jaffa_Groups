@@ -11,6 +11,28 @@ from database import (
 )
 from models import CurrencyInfo, ExchangeRateResponse
 
+# Abbreviations that must remain fully uppercase (not title-cased)
+_UPPERCASE_COUNTRIES = {"USA", "UAE", "UK", "EU"}
+
+
+def _format_country(name: str) -> str:
+    """Format stored country name for display, preserving known abbreviations."""
+    upper = name.upper()
+    if upper in _UPPERCASE_COUNTRIES:
+        return upper
+    return name.title()
+
+
+def _format_rate(rate: float) -> str:
+    """Format exchange rate removing trailing zeros, matching spec format."""
+    formatted = f"{rate:.10f}".rstrip("0").rstrip(".")
+    # Ensure at least 2 decimal places for readability
+    if "." not in formatted:
+        formatted += ".00"
+    elif len(formatted.split(".")[1]) < 2:
+        formatted += "0" * (2 - len(formatted.split(".")[1]))
+    return formatted
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -45,7 +67,7 @@ def get_currencies():
 
     return {
         row["currency_code"]: CurrencyInfo(
-            countryName=row["country_name"].title(),
+            countryName=_format_country(row["country_name"]),
             currencyCode=row["currency_code"],
             currencyName=row["currency_name"],
         )
@@ -90,7 +112,7 @@ def get_exchange_rate(
             detail=f"Exchange rate not available for {from_code} → {to_code}",
         )
 
-    formatted = f"{rate:.4f}" if rate != int(rate) else f"{rate:.2f}"
+    formatted = _format_rate(rate)
 
     return ExchangeRateResponse(
         fromCurrencyCode=from_code,
