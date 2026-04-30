@@ -10,6 +10,7 @@ import LiveClock from './components/LiveClock'
 export default function App() {
   const [currency1, setCurrency1] = useState('')
   const [currency2, setCurrency2] = useState('')
+  const [amount, setAmount] = useState('1')
 
   const { data: currencies, isLoading: loadingCurrencies, error: currenciesError } = useCurrencies()
   const mutation = useExchangeRateMutation()
@@ -153,6 +154,32 @@ export default function App() {
                     </div>
                   </div>
 
+                  {/* Amount input */}
+                  <div className="flex flex-col gap-1">
+                    <label className="text-xs uppercase tracking-wider text-slate-500 font-semibold px-1">
+                      Amount
+                    </label>
+                    <div className="relative">
+                      <span
+                        className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm font-medium select-none"
+                        style={{ pointerEvents: 'none' }}
+                      >
+                        {currency1 ? currency1 : '#'}
+                      </span>
+                      <input
+                        type="number"
+                        min="0.000001"
+                        step="any"
+                        value={amount}
+                        onChange={e => setAmount(e.target.value)}
+                        className="currency-select w-full pl-12 pr-4 py-3 text-white font-semibold text-base"
+                        style={{ appearance: 'textfield' }}
+                        placeholder="1"
+                        data-testid="amount-input"
+                      />
+                    </div>
+                  </div>
+
                   {/* Validation message */}
                   <AnimatePresence>
                     {sameSelected && (
@@ -216,7 +243,7 @@ export default function App() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <RateDisplay data={mutation.data} />
+                  <RateDisplay data={mutation.data} amount={Math.max(0.000001, parseFloat(amount) || 1)} />
                 </motion.div>
               )}
             </AnimatePresence>
