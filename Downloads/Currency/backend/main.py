@@ -1,0 +1,104 @@
+from contextlib import asynccontextmanager
+from fastapi import FastAPI, HTTPException, Path
+from fastapi.middleware.cors import CORSMiddleware
+
+from database import (
+    ALLOWED_CURRENCIES,
+    get_connection,
+    init_db,
+    resolve_rate,
+    seed_db,
+)
+from models import CurrencyInfo, ExchangeRateResponse
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    init_db()
+    seed_db()
+    yield
+
+
+app = FastAPI(
+    title="Currency Exchange Rate API",
+    description="Currency Exchange Rate Monitor — MLCV-2026-6695",
+    version="1.0.0",
+    lifespan=lifespan,
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+@app.get("/currency", response_model=dict[str, CurrencyInfo], summary="List all currencies")
+def get_currencies():
+    """Returns all supported currencies keyed by currency code."""
+    with get_connection() as conn:
+        rows = conn.execute(
+            "SELECT currency_code, currency_name, country_name FROM currency ORDER BY currency_code"
+        ).fetchall()
+
+    return {
+        row["currency_code"]: CurrencyInfo(
+            countryName=row["country_name"].title(),
+            currencyCode=row["currency_code"],
+            currencyName=row["currency_name"],
+        )
+        for row in rows
+    }
+
+
+@app.get(
+    "/exchange-rate/{fromCur}/{toCur}",
+    response_model=ExchangeRateResponse,
+    summary="Get exchange rate between two currencies",
+)
+def get_exchange_rate(
+    fromCur: str = Path(..., description="Source currency code"),
+    toCur: str = Path(..., description="Target currency code"),
+):
+    """
+    Returns the exchange rate between two currencies.
+    Supports direct, inverse, and cross-currency (via INR pivot) calculations.
+    """
+    from_code = fromCur.upper()
+    to_code = toCur.upper()
+
+    invalid = []
+    if from_code not in ALLOWED_CURRENCIES:
+        invalid.append(from_code)
+    if to_code not in ALLOWED_CURRENCIES:
+        invalid.append(to_code)
+
+    if invalid:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unsupported currency code(s): {', '.join(invalid)}. "
+            f"Allowed currencies: {', '.join(sorted(ALLOWED_CURRENCIES))}",
+        )
+
+    rate = resolve_rate(from_code, to_code)
+
+    if rate is None:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Exchange rate not available for {from_code} → {to_code}",
+        )
+
+    formatted = f"{rate:.4f}" if rate != int(rate) else f"{rate:.2f}"
+
+    return ExchangeRateResponse(
+        fromCurrencyCode=from_code,
+        toCurrencyCode=to_code,
+        exchangeRate=formatted,
+    )
+
+
+@app.get("/health", include_in_schema=False)
+def health():
+    return {"status": "ok"}

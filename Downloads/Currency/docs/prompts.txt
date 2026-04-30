@@ -1,0 +1,93 @@
+================================================================
+CLAUDE CODE — COMMANDS & PROMPTS LOG
+Challenge: MLCV-2026-6695 Currency Exchange Rate Monitor
+Date: 2026-04-30
+================================================================
+
+PROMPT 1 (Initial task):
+"@PDF GO through the instruction in the file carefully and make me win the challenge
+make sure to build the challenge fully functional and best world class futuristic UI/UX
+and good experience also counter all the challenges and special cases then and there.
+make me detailed plan."
+
+COMMAND: Plan mode activated. Read 5-page PDF, explored existing codebase,
+designed architecture with FastAPI + SQLite backend, React + TypeScript + Tailwind
++ Framer Motion frontend, pytest + Vitest test suites.
+
+----------------------------------------------------------------
+PROMPT 2 (Backend foundation):
+Claude Code was directed to create:
+- backend/database.py   — SQLite init, seed, rate resolver
+- backend/models.py     — Pydantic response models
+- backend/main.py       — FastAPI app with lifespan, CORS, routes
+- backend/seed.py       — Standalone seed script
+- backend/requirements.txt
+
+Key design decision: resolve_rate() 4-level cascade (direct → inverse → INR pivot → USD pivot)
+to handle all 30 currency pair permutations from only 6 stored rates.
+
+----------------------------------------------------------------
+PROMPT 3 (Backend tests):
+"Create pytest test suite covering positive and negative scenarios per challenge spec."
+
+Created backend/tests/test_api.py with 11 tests:
+- Uses FastAPI TestClient via httpx
+- Patches DB_PATH to temp file for test isolation
+- Tests: direct rate, inverse rate, cross-rate via pivot, same currency=1.0,
+         case-insensitive input, invalid currency codes (400 errors)
+
+Run: cd backend && python -m pytest tests/ -v
+
+----------------------------------------------------------------
+PROMPT 4 (Frontend scaffold):
+"Create React + TypeScript Vite frontend with Tailwind CSS and Framer Motion.
+Futuristic 'Cosmic Finance' theme: dark space background, glassmorphism cards,
+neon cyan/purple accents."
+
+Commands used:
+  npm create vite@latest frontend -- --template react-ts
+  npm install framer-motion axios @tanstack/react-query tailwindcss @tailwindcss/vite
+  npm install -D vitest @vitest/ui jsdom @testing-library/react @testing-library/jest-dom
+
+----------------------------------------------------------------
+PROMPT 5 (UI Components):
+Created component tree:
+- src/components/Background.tsx   — CSS animated grid + floating blur orbs
+- src/components/CurrencySelector.tsx — Glassmorphism dropdown, flag emoji, cyan/purple accent
+- src/components/SwapButton.tsx   — 180° Framer Motion rotation on swap
+- src/components/RateDisplay.tsx  — Animated count-up rate, shows inverse rate too
+- src/components/LiveClock.tsx    — Live timestamp (1s interval, for screenshots)
+- src/App.tsx                     — Main state management, submit logic, error handling
+- src/main.tsx                    — QueryClientProvider wrapper
+
+Key UX decisions:
+- Currency 1 selection dynamically removed from Currency 2 options (spec requirement)
+- Submit disabled until both selected and different
+- Rate animates from 0 using requestAnimationFrame cubic ease-out
+- Both forward and inverse rates displayed simultaneously
+- Inline error messages with AnimatePresence enter/exit animations
+
+----------------------------------------------------------------
+PROMPT 6 (Frontend tests):
+"Create Vitest + React Testing Library tests covering positive and negative cases."
+
+Created frontend/src/tests/App.test.tsx with 8 tests:
+- Mocked API layer (vi.mock('../api/currency'))
+- Tests: render, exclusion, button state, rate display, error handling, swap, clock
+
+Run: cd frontend && npm test
+
+----------------------------------------------------------------
+PROMPT 7 (Documentation):
+Created required challenge deliverables:
+- docs/CLAUDE.md              — Custom instructions (code logic, tests, review guidelines)
+- docs/prompts.txt            — This file (all commands and prompts)
+- docs/database/create_tables.sql
+- docs/database/seed_data.sql
+- README.md                   — Setup and run instructions
+
+================================================================
+TEST RESULTS SUMMARY:
+Backend:  11/11 tests PASSED  (pytest)
+Frontend:  8/8  tests PASSED  (vitest)
+================================================================
