@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+*.egg-info/
+
+# SQLite DB (auto-created by seed script — not a source artifact)
+backend/currency.db
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.idea/
+*.suo
+*.user
+.vscode/settings.json
+
+# Test caches
+.pytest_cache/
+*.pytest_cache
+frontend/.vitest/

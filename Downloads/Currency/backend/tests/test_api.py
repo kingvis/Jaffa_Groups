@@ -1,31 +1,14 @@
 """
 Test suite for Currency Exchange Rate API.
-Covers 10 test cases: positive and negative scenarios.
+Covers 11 test cases: positive and negative scenarios.
+
+DB isolation is handled by conftest.py (temp SQLite file, session-scoped).
 """
-import sys
-import os
-import tempfile
 import pytest
 from fastapi.testclient import TestClient
-
-# Use a temp DB for tests so we never pollute the real database
-_tmp_db = tempfile.NamedTemporaryFile(suffix=".db", delete=False)
-_tmp_db.close()
-
-# Patch DB_PATH before importing app modules
-import database
-database.DB_PATH = type(database.DB_PATH)(_tmp_db.name)
-
 from main import app
 
 client = TestClient(app)
-
-
-@pytest.fixture(autouse=True, scope="session")
-def setup_db():
-    """Initialize and seed test database once for the session."""
-    database.init_db()
-    database.seed_db()
 
 
 # ─── Positive Tests ──────────────────────────────────────────────────────────
